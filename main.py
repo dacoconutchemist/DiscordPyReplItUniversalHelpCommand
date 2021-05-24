@@ -45,12 +45,12 @@ async def on_ready():
     catdict = {}
     for doc in docstrings:
       spl = doc.split("\n")
-      fckthisbugaaaaa = None
+      aaaaa = None
       try:
-        fckthisbugaaaaa = catdict[spl[0]]
+        aaaaa = catdict[spl[0]]
       except KeyError:
-        fckthisbugaaaaa = ""
-      catdict[spl[0]] = fckthisbugaaaaa + "\n".join(spl[1:]) + "\n"
+        aaaaa = ""
+      catdict[spl[0]] = aaaaa + "\n".join(spl[1:]) + "\n"
     for i in catdict.keys():
       if i == "secret": continue
       helpemb.add_field(name=i + "\u200b", value=catdict[i][:-1] + "\u200b", inline=False) 
